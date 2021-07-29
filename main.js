@@ -1,4 +1,4 @@
-var currentRank = 0;
+var currentRank = 0;                                                    //Đếm số nhấn nút
 var ruleScore = [2,1,-1,-2,-3,1,2];
 var names = {
     player1: "",
@@ -15,11 +15,12 @@ var scores = [
     }
 ];
 var newScore = {
-    score1: 0,
-    score2: 0,
-    score3: 0,
-    score4: 0
+    player1: 0,
+    player2: 0,
+    player3: 0,
+    player4: 0
 }
+var totalScores = [0,0,0,0];
 
 var inputName1 = document.getElementById('player1');
 var colName1 = document.getElementById('col-name1');
@@ -37,27 +38,35 @@ var inputName4 = document.getElementById('player4');
 var colName4 = document.getElementById('col-name4');
 var btn4 = document.getElementById('btn-rank-4');
 
+
+//Xử lý nhập tên
 inputName1.onchange = function(e){
     names.player1 = e.target.value;
     colName1.innerText = names.player1;
     btn1.innerText = names.player1;
+    document.getElementById('special-score1').placeholder = names.player1;
 }
 inputName2.onchange = function(e){
     names.player2 = e.target.value;
     colName2.innerText = names.player2;
     btn2.innerText = names.player2;
+    document.getElementById('special-score2').placeholder = names.player2;
 }
 inputName3.onchange = function(e){
     names.player3 = e.target.value;
     colName3.innerText = names.player3;
     btn3.innerText = names.player3;
+    document.getElementById('special-score3').placeholder = names.player3;
 }
 inputName4.onchange = function(e){
     names.player4 = e.target.value;
     colName4.innerText = names.player4;
     btn4.innerText = names.player4;
+    document.getElementById('special-score4').placeholder = names.player4;
 }
 
+
+//Xử lý nhập luật
 var inputRole1 = document.getElementById('score1');
 var inputRole2 = document.getElementById('score2');
 // var inputRole3 = document.getElementById('score3');
@@ -72,14 +81,11 @@ inputRole2.onchange = function(e){
     ruleScore[1] = e.target.value;
     ruleScore[2] = ruleScore[1]*-1;
 }
-// inputRole3.onchange = function(e){
-// }
-// inputRole4.onchange = function(e){
-// }
 inputRule5.onchange = function(e){
     ruleScore[4] = e.target.value;
 }
 
+//Tạo bảng
 function createNewRow(){
     var table = document.getElementById("myTable");
     var row = table.insertRow(1);
@@ -89,6 +95,9 @@ function createNewRow(){
     row.insertCell(3).innerHTML = newScore.player4;
 }
 
+
+
+// Xử lý nút nhập điểm
 btn1.onclick = function(){
     newScore.player1 = ruleScore[currentRank];
     currentRank++;
@@ -105,6 +114,7 @@ btn4.onclick = function(){
     newScore.player4 = ruleScore[currentRank];
     currentRank++;
 }
+
 var btnConfirm = document.getElementById('btn-confirm');
 btnConfirm.onclick = function(){
     if(currentRank == 1){
@@ -121,10 +131,42 @@ btnConfirm.onclick = function(){
         }
     }
     scores.push(newScore);
+    calcTotalScore();
     createNewRow();
+    updateTotal();
+    resetNewScore();
+}
+
+document.getElementById('btn-confirm2').onclick = function(){
+    newScore.player1 = document.getElementById('special-score1').value;
+    newScore.player2 = document.getElementById('special-score2').value;
+    newScore.player3 = document.getElementById('special-score3').value;
+    newScore.player4 = document.getElementById('special-score4').value;
+    scores.push(newScore);
+    calcTotalScore();
+    createNewRow();
+    updateTotal();
+    resetNewScore();
+}
+
+function calcTotalScore(){
+    var temp = 0;
+    for(var key in newScore){
+        totalScores[temp] += newScore[key];
+        temp++;
+    }
+}
+function resetNewScore(){
     newScore.player1 = 0;
     newScore.player2 = 0;
     newScore.player3 = 0;
     newScore.player4 = 0;
     currentRank = 0;
+}
+
+function updateTotal(){
+    document.getElementById('total1').innerText = totalScores[0];
+    document.getElementById('total2').innerText = totalScores[1];
+    document.getElementById('total3').innerText = totalScores[2];
+    document.getElementById('total4').innerText = totalScores[3];
 }
