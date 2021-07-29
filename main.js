@@ -146,15 +146,19 @@ btnConfirm.onclick = function(){
 }
 
 document.getElementById('btn-confirm2').onclick = function(){
-    newScore.player1 = document.getElementById('special-score1').value;
-    newScore.player2 = document.getElementById('special-score2').value;
-    newScore.player3 = document.getElementById('special-score3').value;
-    newScore.player4 = document.getElementById('special-score4').value;
+    newScore.player1 = Number(document.getElementById('special-score1').value);
+    newScore.player2 = Number(document.getElementById('special-score2').value);
+    newScore.player3 = Number(document.getElementById('special-score3').value);
+    newScore.player4 = Number(document.getElementById('special-score4').value);
     scores.push(newScore);
     calcTotalScore();
     createNewRow();
     updateTotal();
     resetNewScore();
+    document.getElementById('special-score1').value = "";
+    document.getElementById('special-score2').value = "";
+    document.getElementById('special-score3').value = "";
+    document.getElementById('special-score4').value = "";
 }
 
 function calcTotalScore(){
