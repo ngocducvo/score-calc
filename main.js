@@ -43,7 +43,7 @@ var btn4 = document.getElementById('btn-rank-4');
 inputName1.onchange = function(e){
     names.player1 = e.target.value;
     colName1.innerText = names.player1;
-    document.getElementById('btn-player1').innerText = names.player1;
+    btn1.innerText = names.player1;
     document.getElementById('special-score1').placeholder = names.player1;
 }
 inputName2.onchange = function(e){
@@ -101,18 +101,22 @@ function createNewRow(){
 btn1.onclick = function(){
     newScore.player1 = ruleScore[currentRank];
     currentRank++;
+    btn1.disabled = true;
 }
 btn2.onclick = function(){
     newScore.player2 = ruleScore[currentRank];
     currentRank++;
+    btn2.disabled = true;
 }
 btn3.onclick = function(){
     newScore.player3 = ruleScore[currentRank];
     currentRank++;
+    btn3.disabled = true;
 }
 btn4.onclick = function(){
     newScore.player4 = ruleScore[currentRank];
     currentRank++;
+    btn4.disabled = true;
 }
 
 var btnConfirm = document.getElementById('btn-confirm');
@@ -135,6 +139,10 @@ btnConfirm.onclick = function(){
     createNewRow();
     updateTotal();
     resetNewScore();
+    btn1.disabled = false;
+    btn2.disabled = false;
+    btn3.disabled = false;
+    btn4.disabled = false;
 }
 
 document.getElementById('btn-confirm2').onclick = function(){
