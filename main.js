@@ -43,7 +43,7 @@ var btn4 = document.getElementById('btn-rank-4');
 inputName1.onchange = function(e){
     names.player1 = e.target.value;
     colName1.innerText = names.player1;
-    btn1.innerText = names.player1;
+    document.getElementById('btn-player1').innerText = names.player1;
     document.getElementById('special-score1').placeholder = names.player1;
 }
 inputName2.onchange = function(e){
@@ -169,4 +169,17 @@ function updateTotal(){
     document.getElementById('total2').innerText = totalScores[1];
     document.getElementById('total3').innerText = totalScores[2];
     document.getElementById('total4').innerText = totalScores[3];
+}
+
+var type = document.getElementById('type-choose');
+type.onclick = function(){
+    var normalType = document.getElementById('normal-score');
+    var specialType = document.getElementById('special-score');
+    if (type.checked == true){
+        normalType.style.display = "none";
+        specialType.style.display = "block"
+      } else {
+        normalType.style.display = "block";
+        specialType.style.display = "none"
+      }
 }

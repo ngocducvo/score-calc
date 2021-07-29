@@ -11,6 +11,9 @@
 		<title>Hello, world!</title>
 	</head>
 	<body>
+		<div class="header">
+
+		</div>
         <!-- Name input -->
 		<div class="input-name">
 			<div class="form-group">
@@ -56,17 +59,33 @@
 			</div>
 		</div>
 
+		<!-- Score input types -->
+		<div class="input-type-choose">
+			<span>Nhập điểm thủ công</span>
+			<label class="switch">
+				<input type="checkbox" id='type-choose'>
+				<span class="slider round"></span>
+			</label>
+		</div>
+
 		<!-- Button rank -->
         <div class="score-input">
-			<div class="normal-score">
-				<button type="button" class="btn btn-primary" id="btn-rank-1">Player1</button>
+			<div class="normal-score" id="normal-score">
+				<!-- <button type="button" class="btn btn-primary" id="btn-rank-1">Player1</button> -->
+				<button class="pushable" id="btn-rank-1">
+					<span class="shadow"></span>
+					<span class="edge"></span>
+					<span class="front" id="btn-player1">
+					  Player1
+					</span>
+				</button>
 				<button type="button" class="btn btn-success" id="btn-rank-2">Player2</button>
 				<button type="button" class="btn btn-danger" id="btn-rank-3">Player3</button>
 				<button type="button" class="btn btn-warning" id="btn-rank-4">Player4</button>
 				<button type="button" class="btn btn-secondary" id="btn-confirm">Xác nhận</button>
 			</div>
 
-			<div class="special-score">
+			<div class="special-score" id="special-score">
 				<div class="input-name">
 					<div class="form-group">
 						<input type="number" class="form-control btn btn-primary" name="player-name" id="special-score1" aria-describedby="helpId" placeholder="Nhập điểm">
