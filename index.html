@@ -15,51 +15,54 @@
 
 		</div>
         <!-- Name input -->
-		<div class="input-name">
-			<div class="form-group">
-				<label for="">Player 1:</label>
-				<input type="text" class="form-control" name="player-name" id="player1" aria-describedby="helpId" placeholder="Nhập tên người chơi">
+		<div class="section">
+			<div class="section__item">
+				<div class="input-name">
+					<div class="form-group">
+						<label for="">Player 1:</label>
+						<input type="text" class="form-control" name="player-name" id="player1" aria-describedby="helpId" placeholder="Nhập tên người chơi">
+					</div>
+					<div class="form-group">
+						<label for="">Player 2:</label>
+						<input type="text" class="form-control" name="player-name" id="player2" aria-describedby="helpId" placeholder="Nhập tên người chơi">
+					</div>
+					<div class="form-group">
+						<label for="">Player 3:</label>
+						<input type="text" class="form-control" name="player-name" id="player3" aria-describedby="helpId" placeholder="Nhập tên người chơi">
+					</div>
+					<div class="form-group">
+						<label for="">Player 4:</label>
+						<input type="text" class="form-control" name="player-name" id="player4" aria-describedby="helpId" placeholder="Nhập tên người chơi">
+					</div>
+				</div>
+				
+				<div class="input-name">
+					<div class="form-group">
+						<label for="">Điểm hạng nhất:</label>
+						<input type="number" class="form-control" name="score-rank" id="score1" aria-describedby="helpId" placeholder="Nhập điểm người nhất">
+					</div>
+					<div class="form-group">
+						<label for="">Điểm hạng 2:</label>
+						<input type="number" class="form-control" name="score-rank" id="score2" aria-describedby="helpId" placeholder="Nhập điểm người nhì">
+					</div>
+					<!-- <div class="form-group">
+						<label for="">Điểm hạng 3:</label>
+						<input type="number" class="form-control" name="score-rank" id="score3" aria-describedby="helpId" placeholder="Nhập điểm người ba">
+						<small id="helpId" class="form-text text-muted">Có thể không nhập</small>
+					</div>
+					<div class="form-group">
+						<label for="">Điểm hạng 4:</label>
+						<input type="number" class="form-control" name="score-rank" id="score4" aria-describedby="helpId" placeholder="Nhập điểm người tư">
+						<small id="helpId" class="form-text text-muted">Có thể không nhập</small>
+					</div> -->
+					<div class="form-group">
+						<label for="">Điểm cháy</label>
+						<input type="number" class="form-control" name="score-rank" id="score-rule1" aria-describedby="helpId" placeholder="Nhập điểm cháy">
+					</div>
+				</div>
 			</div>
-            <div class="form-group">
-				<label for="">Player 2:</label>
-				<input type="text" class="form-control" name="player-name" id="player2" aria-describedby="helpId" placeholder="Nhập tên người chơi">
-			</div>
-            <div class="form-group">
-				<label for="">Player 3:</label>
-				<input type="text" class="form-control" name="player-name" id="player3" aria-describedby="helpId" placeholder="Nhập tên người chơi">
-			</div>
-            <div class="form-group">
-				<label for="">Player 4:</label>
-				<input type="text" class="form-control" name="player-name" id="player4" aria-describedby="helpId" placeholder="Nhập tên người chơi">
-			</div>
-		</div>
-        
-        <div class="input-name">
-			<div class="form-group">
-				<label for="">Điểm hạng nhất:</label>
-				<input type="number" class="form-control" name="score-rank" id="score1" aria-describedby="helpId" placeholder="Nhập điểm người nhất">
-			</div>
-            <div class="form-group">
-				<label for="">Điểm hạng 2:</label>
-				<input type="number" class="form-control" name="score-rank" id="score2" aria-describedby="helpId" placeholder="Nhập điểm người nhì">
-			</div>
-            <!-- <div class="form-group">
-				<label for="">Điểm hạng 3:</label>
-				<input type="number" class="form-control" name="score-rank" id="score3" aria-describedby="helpId" placeholder="Nhập điểm người ba">
-				<small id="helpId" class="form-text text-muted">Có thể không nhập</small>
-			</div>
-            <div class="form-group">
-				<label for="">Điểm hạng 4:</label>
-				<input type="number" class="form-control" name="score-rank" id="score4" aria-describedby="helpId" placeholder="Nhập điểm người tư">
-				<small id="helpId" class="form-text text-muted">Có thể không nhập</small>
-			</div> -->
-			<div class="form-group">
-				<label for="">Điểm cháy</label>
-				<input type="number" class="form-control" name="score-rank" id="score-rule1" aria-describedby="helpId" placeholder="Nhập điểm cháy">
-			</div>
-		</div>
-
-		<!-- Score input types -->
+			<div class="section__item">
+						<!-- Score input types -->
 		<div class="input-type-choose">
 			<span>Nhập điểm thủ công</span>
 			<label class="switch">
@@ -111,28 +114,35 @@
 			<label class="btn btn-danger" id="total3">0</label>
 			<label class="btn btn-warning" id="total4">0</label>
 		</div>
+			</div>
+			<div class="section__item">
+				        <!-- Table score -->
+						<div class="table-score">
+							<table class="table" id="myTable">
+								<thead>
+									<tr>
+										<th id="col-name1">Player1</th>
+										<th id="col-name2">Player2</th>
+										<th id="col-name3">Player3</th>
+										<th id="col-name4">Player4</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row">0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+			</div>
+		</div>
 
-        <!-- Table score -->
-        <div class="table-score">
-            <table class="table" id="myTable">
-                <thead>
-                    <tr>
-                        <th id="col-name1">Player1</th>
-                        <th id="col-name2">Player2</th>
-                        <th id="col-name3">Player3</th>
-                        <th id="col-name4">Player4</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td scope="row">0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+
+
+
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

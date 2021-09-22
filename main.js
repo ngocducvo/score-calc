@@ -74,15 +74,15 @@ var inputRole2 = document.getElementById('score2');
 var inputRule5 = document.getElementById('score-rule1');
 
 inputRole1.onchange = function(e){
-    ruleScore[0] = e.target.value;
+    ruleScore[0] = parseInt(e.target.value);
     ruleScore[3] = ruleScore[0]*-1;
 }
 inputRole2.onchange = function(e){
-    ruleScore[1] = e.target.value;
+    ruleScore[1] = parseInt(e.target.value);
     ruleScore[2] = ruleScore[1]*-1;
 }
 inputRule5.onchange = function(e){
-    ruleScore[4] = e.target.value;
+    ruleScore[4] = parseInt(e.target.value);
 }
 
 //Tạo bảng

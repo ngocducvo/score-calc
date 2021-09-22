@@ -128,3 +128,14 @@
 .total-score-board label{
     width: 20%;
 }
+
+
+.section {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.section__item {
+  scroll-snap-align: start;
+  flex: 0 0 100%;
+}
