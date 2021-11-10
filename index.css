@@ -5,13 +5,32 @@ body {
     height: 100vh;
     background-image: linear-gradient(140deg,#FFE8AE 35%,#42D2FF);
     max-width: 415px;
+    max-height: 100%;
 }
 h4 {
     text-align: center;
 }
+
 .mt-60 {
     margin-top: 130px;
 }
+.color-1{
+    background-color: rgb(124,121,255,0.9);
+    border: rgb(124,121,255);
+}
+.color-2{
+    background-color: rgb(71,234,87,0.9);
+    border: rgb(71,234,87);
+}
+.color-3{
+    background-color: rgb(255,166,84,0.9);
+    border: rgb(255,166,84);
+}
+.color-4{
+    background-color: rgb(255,55,55,0.9);
+    border: rgb(255,55,55);
+}
+
 .header{
     height: 60px;
     background-color: #FFE195;
@@ -31,24 +50,6 @@ h4 {
     font-size: 15px;
 }
 
-.color-1{
-    background-color: rgb(124,121,255,0.9);
-    border: rgb(124,121,255);
-}
-.color-2{
-    background-color: rgb(71,234,87,0.9);
-    border: rgb(71,234,87);
-}
-.color-3{
-    background-color: rgb(255,166,84,0.9);
-    border: rgb(255,166,84);
-}
-.color-4{
-    background-color: rgb(255,55,55,0.9);
-    border: rgb(255,55,55);
-}
-
-
 .input-name-group{
     margin-top: 20px;
     position: relative;
@@ -60,6 +61,23 @@ h4 {
     height: 60px;
     margin-bottom: 25px;
     border-radius: 30px;
+}
+.shadow input[type=radio]{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    left: -85px;
+    top: 5px;
+}
+#rule-3 {
+    left: -71px;
+}
+.shadow label {
+    line-height: 60px;
+}
+.label-radio {
+    text-align: center;
+    font-size: 20px;
 }
 .input-name{
     display: inline;
@@ -74,9 +92,7 @@ h4 {
 .input-name::placeholder{
     color: white;
 }
-.input-name:focus-visible{
-    box-shadow: 7px 7px 10px rgb(102,255,255,0.8);
-}
+
 
 .score-input{
     width: 80%;
