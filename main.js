@@ -195,3 +195,8 @@ type.onclick = function(){
         specialType.style.display = "none"
       }
 }
+
+//Reset
+
+//Undo
+

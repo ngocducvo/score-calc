@@ -3,7 +3,7 @@
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -12,31 +12,21 @@
 	</head>
 	<body>
 		<div class="header">
-
+			This is name
 		</div>
+		
         <!-- Name input -->
 		<div class="section">
 			<div class="section__item">
-				<div class="input-name">
-					<div class="form-group">
-						<label for="">Player 1:</label>
-						<input type="text" class="form-control" name="player-name" id="player1" aria-describedby="helpId" placeholder="Nhập tên người chơi">
-					</div>
-					<div class="form-group">
-						<label for="">Player 2:</label>
-						<input type="text" class="form-control" name="player-name" id="player2" aria-describedby="helpId" placeholder="Nhập tên người chơi">
-					</div>
-					<div class="form-group">
-						<label for="">Player 3:</label>
-						<input type="text" class="form-control" name="player-name" id="player3" aria-describedby="helpId" placeholder="Nhập tên người chơi">
-					</div>
-					<div class="form-group">
-						<label for="">Player 4:</label>
-						<input type="text" class="form-control" name="player-name" id="player4" aria-describedby="helpId" placeholder="Nhập tên người chơi">
-					</div>
+				<h4 class="mt-60">Setting your name</h4>
+				<div class="input-name-group">
+					<input type="text" class="input-name color-1" id="player1" placeholder="Player 1">
+					<input type="text" class="input-name color-2" id="player2" placeholder="Nhập tên người chơi">
+					<input type="text" class="input-name color-3" id="player3" placeholder="Nhập tên người chơi">
+					<input type="text" class="input-name color-4" id="player4" placeholder="Nhập tên người chơi">
 				</div>
 				
-				<div class="input-name">
+				<!-- <div class="input-name-group">
 					<div class="form-group">
 						<label for="">Điểm hạng nhất:</label>
 						<input type="number" class="form-control" name="score-rank" id="score1" aria-describedby="helpId" placeholder="Nhập điểm người nhất">
@@ -45,75 +35,66 @@
 						<label for="">Điểm hạng 2:</label>
 						<input type="number" class="form-control" name="score-rank" id="score2" aria-describedby="helpId" placeholder="Nhập điểm người nhì">
 					</div>
-					<!-- <div class="form-group">
-						<label for="">Điểm hạng 3:</label>
-						<input type="number" class="form-control" name="score-rank" id="score3" aria-describedby="helpId" placeholder="Nhập điểm người ba">
-						<small id="helpId" class="form-text text-muted">Có thể không nhập</small>
-					</div>
-					<div class="form-group">
-						<label for="">Điểm hạng 4:</label>
-						<input type="number" class="form-control" name="score-rank" id="score4" aria-describedby="helpId" placeholder="Nhập điểm người tư">
-						<small id="helpId" class="form-text text-muted">Có thể không nhập</small>
-					</div> -->
+
 					<div class="form-group">
 						<label for="">Điểm cháy</label>
 						<input type="number" class="form-control" name="score-rank" id="score-rule1" aria-describedby="helpId" placeholder="Nhập điểm cháy">
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="section__item">
 						<!-- Score input types -->
-		<div class="input-type-choose">
-			<span>Nhập điểm thủ công</span>
-			<label class="switch">
-				<input type="checkbox" id='type-choose'>
-				<span class="slider round"></span>
-			</label>
-		</div>
+				<div class="input-type-choose">
+					<span>Nhập điểm thủ công</span>
+					<label class="switch">
+						<input type="checkbox" id='type-choose'>
+						<span class="slider round"></span>
+					</label>
+				</div>
 
-		<!-- Button rank -->
-        <div class="score-input">
-			<div class="normal-score" id="normal-score">
-				<div class="row-btn">
-					<button type="button" class="btn btn-primary" id="btn-rank-1">Player1</button>
-					<button type="button" class="btn btn-success" id="btn-rank-2">Player2</button>
-				</div>
-				<div class="row-btn">
-					<button type="button" class="btn btn-danger" id="btn-rank-3">Player3</button>
-					<button type="button" class="btn btn-warning" id="btn-rank-4">Player4</button>
-				</div>
-				<div class="confirm-btn">
-					<button type="button" class="btn btn-secondary" id="btn-confirm">Xác nhận</button>
-				</div>
-			</div>
+				<!-- Button rank -->
+				<div class="score-input">
+					<div class="normal-score" id="normal-score">
+						<div class="row-btn">
+							<button type="button" class="btn btn-primary" id="btn-rank-1">Player1</button>
+							<button type="button" class="btn btn-success" id="btn-rank-2">Player2</button>
+						</div>
+						<div class="row-btn">
+							<button type="button" class="btn btn-danger" id="btn-rank-3">Player3</button>
+							<button type="button" class="btn btn-warning" id="btn-rank-4">Player4</button>
+						</div>
+						<div class="confirm-btn">
+							<button type="button" class="btn btn-secondary" id="btn-confirm">Xác nhận</button>
+						</div>
+					</div>
 
-			<div class="special-score" id="special-score">
-				<div class="input-name">
-					<div class="form-group">
-						<input type="number" class="form-control input-primary" name="player-name" id="special-score1" aria-describedby="helpId" placeholder="Nhập điểm">
-					</div>
-					<div class="form-group">
-						<input type="number" class="form-control input-success" name="player-name" id="special-score2" aria-describedby="helpId" placeholder="Nhập điểm">
-					</div>
-					<div class="form-group">
-						<input type="number" class="form-control input-danger" name="player-name" id="special-score3" aria-describedby="helpId" placeholder="Nhập điểm">
-					</div>
-					<div class="form-group">
-						<input type="number" class="form-control input-warning" name="player-name" id="special-score4" aria-describedby="helpId" placeholder="Nhập điểm">
+					<div class="special-score" id="special-score">
+						<div class="input-name">
+							<div class="form-group">
+								<input type="number" class="form-control input-primary" name="player-name" id="special-score1" aria-describedby="helpId" placeholder="Nhập điểm">
+							</div>
+							<div class="form-group">
+								<input type="number" class="form-control input-success" name="player-name" id="special-score2" aria-describedby="helpId" placeholder="Nhập điểm">
+							</div>
+							<div class="form-group">
+								<input type="number" class="form-control input-danger" name="player-name" id="special-score3" aria-describedby="helpId" placeholder="Nhập điểm">
+							</div>
+							<div class="form-group">
+								<input type="number" class="form-control input-warning" name="player-name" id="special-score4" aria-describedby="helpId" placeholder="Nhập điểm">
+							</div>
+						</div>
+						<div class="confirm-btn">
+							<button type="button" class="btn btn-secondary" id="btn-confirm2">Xác nhận</button>
+						</div>
 					</div>
 				</div>
-				<div class="confirm-btn">
-					<button type="button" class="btn btn-secondary" id="btn-confirm2">Xác nhận</button>
+				
+				<div class="total-score-board">
+					<label class="btn btn-primary" id="total1">0</label>
+					<label class="btn btn-success" id="total2">0</label>
+					<label class="btn btn-danger" id="total3">0</label>
+					<label class="btn btn-warning" id="total4">0</label>
 				</div>
-			</div>
-        </div>
-		
-		<div class="total-score-board">
-			<label class="btn btn-primary" id="total1">0</label>
-			<label class="btn btn-success" id="total2">0</label>
-			<label class="btn btn-danger" id="total3">0</label>
-			<label class="btn btn-warning" id="total4">0</label>
-		</div>
 			</div>
 			<div class="section__item">
 				        <!-- Table score -->
@@ -139,6 +120,7 @@
 						</div>
 			</div>
 		</div>
+		<div class="footer">Made by ngdzdep v2.0</div>
 
 
 
