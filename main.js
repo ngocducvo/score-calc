@@ -1,5 +1,7 @@
 var currentRank = 0;                                                    //Đếm số nhấn nút
 var ruleScore = [2,1,-1,-2,-3,1,2];
+var basicRuleScore = [2,1,-1,-2,-3,1,2];
+
 var names = {
     player1: "",
     player2: "",
@@ -67,23 +69,31 @@ inputName4.onchange = function(e){
 
 
 //Xử lý nhập luật
+function handleChangeRule(src){
+    for(var i=0;i<ruleScore.length;i++){
+        ruleScore[i] = src.value * basicRuleScore[i];
+    }
+}
+
 var inputRole1 = document.getElementById('score1');
 var inputRole2 = document.getElementById('score2');
 // var inputRole3 = document.getElementById('score3');
 // var inputRole4 = document.getElementById('score4');
 var inputRule5 = document.getElementById('score-rule1');
 
-inputRole1.onchange = function(e){
-    ruleScore[0] = parseInt(e.target.value);
-    ruleScore[3] = ruleScore[0]*-1;
-}
-inputRole2.onchange = function(e){
-    ruleScore[1] = parseInt(e.target.value);
-    ruleScore[2] = ruleScore[1]*-1;
-}
-inputRule5.onchange = function(e){
-    ruleScore[4] = parseInt(e.target.value);
-}
+// inputRole1.onchange = function(e){
+//     ruleScore[0] = parseInt(e.target.value);
+//     ruleScore[3] = ruleScore[0]*-1;
+// }
+// inputRole2.onchange = function(e){
+//     ruleScore[1] = parseInt(e.target.value);
+//     ruleScore[2] = ruleScore[1]*-1;
+// }
+// inputRule5.onchange = function(e){
+//     ruleScore[4] = parseInt(e.target.value);
+// }
+
+
 
 //Tạo bảng
 function createNewRow(){

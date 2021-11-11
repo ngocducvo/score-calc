@@ -54,15 +54,15 @@
 				<h4 class="mt-60">Chose your rule</h4>
 				<div class="input-name-group text-white">
 					<div class="shadow color-1 label-radio">
-						<input type="radio" id="rule-1"  name="rule-score" value="1">
+						<input type="radio" id="rule-1"  name="rule-score" onchange="handleChangeRule(this)" value="1">
 						<label for="rule-1">1 - 2 - 3</label>
 					</div>
 					<div class="shadow color-2 label-radio">
-						<input type="radio" id="rule-2" name="rule-score" value="2">
+						<input type="radio" id="rule-2" name="rule-score" onchange="handleChangeRule(this)" value="2">
 						<label for="rule-2">2 - 4 - 6</label>
 					</div>
 					<div class="shadow color-3 label-radio">
-						<input type="radio" id="rule-3" name="rule-score" value="3">
+						<input type="radio" id="rule-3" name="rule-score" onchange="handleChangeRule(this)" value="5">
 						<label for="rule-3">5 - 10 - 15</label>
 					</div>
 				</div>
@@ -81,12 +81,12 @@
 				<div class="score-input">
 					<div class="normal-score" id="normal-score">
 						<div class="row-btn">
-							<button type="button" class="btn btn-primary" id="btn-rank-1">Player1</button>
-							<button type="button" class="btn btn-success" id="btn-rank-2">Player2</button>
+							<button type="button" class="btn-size color-1" id="btn-rank-1">Player1</button>
+							<button type="button" class="btn-size color-2" id="btn-rank-2">Player2</button>
 						</div>
 						<div class="row-btn">
-							<button type="button" class="btn btn-danger" id="btn-rank-3">Player3</button>
-							<button type="button" class="btn btn-warning" id="btn-rank-4">Player4</button>
+							<button type="button" class="btn-size color-3" id="btn-rank-3">Player3</button>
+							<button type="button" class="btn-size color-4" id="btn-rank-4">Player4</button>
 						</div>
 						<div class="confirm-btn">
 							<button type="button" class="btn btn-secondary" id="btn-confirm">Xác nhận</button>
