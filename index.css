@@ -121,6 +121,30 @@ h4 {
 .table-score{
     text-align: center;
 }
+
+.table-fixed{
+    width: 100%;
+    background-color: #f3f3f3;
+}
+    tbody{
+      height:200px;
+      overflow-y:auto;
+      width: 100%;
+      scroll-snap-type: y mandatory;
+      }
+    thead,tbody,tr,td,th{
+      display:block;
+    }
+      td{
+        float:left;
+        scroll-snap-align: start;
+      }
+    thead tr th{
+          float:left;
+         background-color: #f39c12;
+         border-color:#e67e22;
+        }
+
 .special-score{
     display: none;
 }
