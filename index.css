@@ -133,7 +133,7 @@ h4 {
 .table-fixed{
     width: 100%;
 }
-tbody{
+/* tbody{
     max-height:200px;
     overflow-y:auto;
     width: 100%;
@@ -141,16 +141,15 @@ tbody{
 }
 td{
     scroll-snap-align: start;
-}
+} */
 
 .my-custom-scrollbar {
     position: relative;
     overflow: auto;
-    }
-    .table-wrapper-scroll-y {
-    display: block;
-    }
-
+}
+.table-wrapper-scroll-y {
+display: block;
+}
 
 
 .special-score{
