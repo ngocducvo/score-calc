@@ -8,7 +8,7 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="index.css">
-		<title>Hello, world!</title>
+		<title>ngdzdep</title>
 	</head>
 	<body>
 		<div class="header">
@@ -24,13 +24,13 @@
 						<input type="text" class="input-name color-1" id="player1" placeholder="Player 1">
 					</div>
 					<div class="shadow">
-						<input type="text" class="input-name color-2" id="player2" placeholder="Nhập tên người chơi">
+						<input type="text" class="input-name color-2" id="player2" placeholder="Player 2">
 					</div>
 					<div class="shadow">
-						<input type="text" class="input-name color-3" id="player3" placeholder="Nhập tên người chơi">
+						<input type="text" class="input-name color-3" id="player3" placeholder="Player 3">
 					</div>
 					<div class="shadow">
-						<input type="text" class="input-name color-4" id="player4" placeholder="Nhập tên người chơi">
+						<input type="text" class="input-name color-4" id="player4" placeholder="Player 4">
 					</div>
 				</div>
 				
@@ -68,9 +68,16 @@
 				</div>
 			</div>
 			<div class="section__item">
+				<div class="empty"></div>
+
+				<div class="total-score-board">
+					<label class="btn btn-primary color-1 text-white" id="total1">0</label>
+					<label class="btn btn-success color-2 text-white" id="total2">0</label>
+					<label class="btn btn-danger color-3 text-white" id="total3">0</label>
+					<label class="btn btn-warning color-4 text-white" id="total4">0</label>
+				</div>
 						<!-- Score input types -->
 				<div class="input-type-choose">
-					<span>Nhập điểm thủ công</span>
 					<label class="switch">
 						<input type="checkbox" id='type-choose'>
 						<span class="slider round"></span>
@@ -81,15 +88,15 @@
 				<div class="score-input">
 					<div class="normal-score" id="normal-score">
 						<div class="row-btn">
-							<button type="button" class="btn-size color-1" id="btn-rank-1">Player1</button>
-							<button type="button" class="btn-size color-2" id="btn-rank-2">Player2</button>
+							<button type="button" class="btn-size color-1 text-white" id="btn-rank-1">Player1</button>
+							<button type="button" class="btn-size color-2 text-white" id="btn-rank-2">Player2</button>
 						</div>
 						<div class="row-btn">
-							<button type="button" class="btn-size color-3" id="btn-rank-3">Player3</button>
-							<button type="button" class="btn-size color-4" id="btn-rank-4">Player4</button>
+							<button type="button" class="btn-size color-3 text-white" id="btn-rank-3">Player3</button>
+							<button type="button" class="btn-size color-4 text-white" id="btn-rank-4">Player4</button>
 						</div>
 						<div class="confirm-btn">
-							<button type="button" class="btn btn-secondary" id="btn-confirm">Xác nhận</button>
+							<button type="button" class="btn-size2 text-white" id="btn-confirm">Xác nhận</button>
 						</div>
 					</div>
 
@@ -109,16 +116,9 @@
 							</div>
 						</div>
 						<div class="confirm-btn">
-							<button type="button" class="btn btn-secondary" id="btn-confirm2">Xác nhận</button>
+							<button type="button" class="btn-size2 text-white" id="btn-confirm2">Xác nhận</button>
 						</div>
 					</div>
-				</div>
-				
-				<div class="total-score-board">
-					<label class="btn btn-primary" id="total1">0</label>
-					<label class="btn btn-success" id="total2">0</label>
-					<label class="btn btn-danger" id="total3">0</label>
-					<label class="btn btn-warning" id="total4">0</label>
 				</div>
 			</div>
 			<div class="section__item">
