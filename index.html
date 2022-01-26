@@ -68,7 +68,26 @@
 				</div>
 			</div>
 			<div class="section__item">
-				<div class="empty"></div>
+				<div class="empty table-score table-wrapper-scroll-y my-custom-scrollbar">
+					<table class="table table-fixed table-bordered table-striped mb-0" id="myTable">
+						<thead>
+							<tr>
+								<th scope="col" id="col-name1">Player1</th>
+								<th scope="col" id="col-name2">Player2</th>
+								<th scope="col" id="col-name3">Player3</th>
+								<th scope="col" id="col-name4">Player4</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td scope="row">0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 
 				<div class="total-score-board">
 					<label class="btn btn-primary color-1 text-white" id="total1">0</label>
@@ -121,16 +140,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="section__item">
+			<!-- <div class="section__item"> -->
 				        <!-- Table score -->
-						<div class="table-score">
-							<table class="table table-fixed" id="myTable">
+						<!-- <div class="table-score table-wrapper-scroll-y my-custom-scrollbar">
+							<table class="table table-fixed table-bordered table-striped mb-0" id="myTable">
 								<thead>
 									<tr>
-										<th id="col-name1">Player1</th>
-										<th id="col-name2">Player2</th>
-										<th id="col-name3">Player3</th>
-										<th id="col-name4">Player4</th>
+										<th scope="col" id="col-name1">Player1</th>
+										<th scope="col" id="col-name2">Player2</th>
+										<th scope="col" id="col-name3">Player3</th>
+										<th scope="col" id="col-name4">Player4</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -142,12 +161,10 @@
 									</tr>
 								</tbody>
 							</table>
-						</div>
-			</div>
+						</div> -->
+			<!-- </div> -->
 		</div>
 		<div class="footer">Made by ngdzdep v2.0</div>
-
-
 
 
 		<!-- Optional JavaScript -->
