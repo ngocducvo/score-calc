@@ -121,6 +121,33 @@ h4 {
     display: flex;
     justify-content: center;
 }
+.btn-func {
+    padding: 0;
+    border-radius: 15px;
+    height: 34px;
+    background-color: transparent ;
+    border: none;
+    align-items: center;
+}
+#btn-rank-1:disabled{
+    background-color: rgb(124,121,255,0.6);
+    box-shadow: none;
+}
+#btn-rank-2:disabled{
+    background-color: rgb(71,234,87,0.6);
+    box-shadow: none;
+}
+#btn-rank-3:disabled{
+    background-color: rgb(255,166,84,0.6);
+    box-shadow: none;
+}
+#btn-rank-4:disabled{
+    background-color: rgb(255,55,55,0.6);
+    box-shadow: none;
+}
+.special-score input::placeholder{
+    color: white;
+}
 .score-input .btn{
     width: 45%;
     height: 50px;

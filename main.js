@@ -9,19 +9,9 @@ var names = {
     player4: ""
 };
 var scores = [
-    {
-        score1: 0,
-        score2: 0,
-        score3: 0,
-        score4: 0
-    }
+    [0,0,0,0]
 ];
-var newScore = {
-    player1: 0,
-    player2: 0,
-    player3: 0,
-    player4: 0
-}
+var newScore = [1,2,3,4];
 var totalScores = [0,0,0,0];
 
 var inputName1 = document.getElementById('player1');
@@ -99,32 +89,36 @@ var inputRule5 = document.getElementById('score-rule1');
 function createNewRow(){
     var table = document.getElementById("myTable");
     var row = table.insertRow(1);
-    row.insertCell(0).innerHTML = newScore.player1;
-    row.insertCell(1).innerHTML = newScore.player2;
-    row.insertCell(2).innerHTML = newScore.player3;
-    row.insertCell(3).innerHTML = newScore.player4;
+    row.insertCell(0).innerHTML = newScore[0];
+    row.insertCell(1).innerHTML = newScore[1];
+    row.insertCell(2).innerHTML = newScore[2];
+    row.insertCell(3).innerHTML = newScore[3];
+}
+function undoRow(){
+    var table = document.getElementById("myTable");
+    var row = table.deleteRow(1);
 }
 
 
 
 // Xử lý nút nhập điểm
 btn1.onclick = function(){
-    newScore.player1 = ruleScore[currentRank];
+    newScore[0] = ruleScore[currentRank];
     currentRank++;
     btn1.disabled = true;
 }
 btn2.onclick = function(){
-    newScore.player2 = ruleScore[currentRank];
+    newScore[1] = ruleScore[currentRank];
     currentRank++;
     btn2.disabled = true;
 }
 btn3.onclick = function(){
-    newScore.player3 = ruleScore[currentRank];
+    newScore[2] = ruleScore[currentRank];
     currentRank++;
     btn3.disabled = true;
 }
 btn4.onclick = function(){
-    newScore.player4 = ruleScore[currentRank];
+    newScore[3] = ruleScore[currentRank];
     currentRank++;
     btn4.disabled = true;
 }
@@ -132,34 +126,30 @@ btn4.onclick = function(){
 var btnConfirm = document.getElementById('btn-confirm');
 btnConfirm.onclick = function(){
     if(currentRank == 1){
-        for(var key in newScore){
-            if(newScore[key] == ruleScore[0]) newScore[key]=ruleScore[4]*-3;
-            else newScore[key] = ruleScore[4];
+        for(let i = 0; i < newScore.length; i++){
+            if(newScore[i] == ruleScore[0]) newScore[i]=ruleScore[4]*-3;
+            else newScore[i] = ruleScore[4];
         }
     }
     else if(currentRank == 2){
-        for(var key in newScore){
-            if(newScore[key] == ruleScore[0]) newScore[key]=ruleScore[4]*-3;
-            else if(newScore[key] == ruleScore[1]) newScore[key] = ruleScore[4]*3;
-            else newScore[key] = 0;
+        for(let i = 0; i < newScore.length; i++){
+            if(newScore[i] == ruleScore[0]) newScore[i]=ruleScore[4]*-3;
+            else if(newScore[i] == ruleScore[1]) newScore[i] = ruleScore[4]*3;
+            else newScore[i] = 0;
         }
     }
-    scores.push(newScore);
+    scores.push([newScore[0], newScore[1], newScore[2], newScore[3]]);
     calcTotalScore();
     createNewRow();
     updateTotal();
     resetNewScore();
-    btn1.disabled = false;
-    btn2.disabled = false;
-    btn3.disabled = false;
-    btn4.disabled = false;
 }
 
 document.getElementById('btn-confirm2').onclick = function(){
-    newScore.player1 = Number(document.getElementById('special-score1').value);
-    newScore.player2 = Number(document.getElementById('special-score2').value);
-    newScore.player3 = Number(document.getElementById('special-score3').value);
-    newScore.player4 = Number(document.getElementById('special-score4').value);
+    newScore[0] = Number(document.getElementById('special-score1').value);
+    newScore[1] = Number(document.getElementById('special-score2').value);
+    newScore[2] = Number(document.getElementById('special-score3').value);
+    newScore[3] = Number(document.getElementById('special-score4').value);
     scores.push(newScore);
     calcTotalScore();
     createNewRow();
@@ -179,11 +169,15 @@ function calcTotalScore(){
     }
 }
 function resetNewScore(){
-    newScore.player1 = 0;
-    newScore.player2 = 0;
-    newScore.player3 = 0;
-    newScore.player4 = 0;
+    newScore[0] = 0;
+    newScore[1] = 0;
+    newScore[2] = 0;
+    newScore[3] = 0;
     currentRank = 0;
+    btn1.disabled = false;
+    btn2.disabled = false;
+    btn3.disabled = false;
+    btn4.disabled = false;
 }
 
 function updateTotal(){
@@ -206,7 +200,23 @@ type.onclick = function(){
       }
 }
 
-//Reset
-
-//Undo
+// //Reset
+document.getElementById('btn-reset').onclick = function(){
+    resetNewScore();
+}
+// //Undo
+document.getElementById('btn-undo').onclick = function(){
+    resetNewScore();
+    //score
+    var undoScore = scores.pop();
+    // //total
+    var temp = 0;
+    for(var key in undoScore){
+        totalScores[temp] -= undoScore[key];
+        temp++;
+    }
+    updateTotal();
+    // //row
+    undoRow();
+}
 
